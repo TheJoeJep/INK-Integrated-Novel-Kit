@@ -1,6 +1,6 @@
 ---
 name: write
-description: Start or resume a writing session on the your novel novel. Runs an interactive turn-by-turn loop in one of two modes — Chapter Mode for drafting prose, Structure Mode for story decisions and consistency audits. Use whenever the author wants to work on the book, write a scene, resolve an open question, or check the project for contradictions.
+description: Start or resume a writing session on the novel. Runs an interactive turn-by-turn loop in one of two modes — Chapter Mode for drafting prose, Structure Mode for story decisions and consistency audits. Use whenever the author wants to work on the book, write a scene, resolve an open question, or check the project for contradictions.
 ---
 
 # /write — the writing loop
