@@ -31,6 +31,17 @@ param(
 $ErrorActionPreference = 'Stop'
 $engine = $PSScriptRoot
 
+# git writes progress and advisory notices to stderr. Under ErrorActionPreference
+# 'Stop', PowerShell turns those into terminating NativeCommandErrors even when
+# git exited 0. Run git through this and judge it by its exit code instead.
+function git-quiet {
+    $out = & git @args 2>&1
+    if ($LASTEXITCODE -ne 0) {
+        throw "git $($args -join ' ') failed ($LASTEXITCODE):`n$($out -join "`n")"
+    }
+    return $out
+}
+
 $cfgPath = Join-Path $engine "ink.local.json"
 if (-not (Test-Path $cfgPath)) { throw "ink.local.json not found. It must set storyPath." }
 $story = (Get-Content $cfgPath -Raw | ConvertFrom-Json).storyPath
@@ -38,13 +49,13 @@ if (-not (Test-Path $story)) { throw "Story workspace not found: $story" }
 
 function Dirty($path) {
     Push-Location $path
-    try { return @(git status --porcelain).Count -gt 0 } finally { Pop-Location }
+    try { return @(git status --porcelain 2>$null).Count -gt 0 } finally { Pop-Location }
 }
 
 function Show($path, $label) {
     Push-Location $path
     try {
-        $files = @(git status --porcelain)
+        $files = @(git status --porcelain 2>$null)
         Write-Host "`n  $label - $($files.Count) change(s)" -ForegroundColor Cyan
         $files | Select-Object -First 12 | ForEach-Object { "      $_" }
         if ($files.Count -gt 12) { "      ... and $($files.Count - 12) more" }
@@ -55,8 +66,8 @@ function Show($path, $label) {
 function AuditEngine {
     Push-Location $engine
     try {
-        git add -A | Out-Null
-        $staged = @(git diff --cached --name-only)
+        git-quiet add -A | Out-Null
+        $staged = @(git diff --cached --name-only 2>$null)
         $bad = $staged | Where-Object {
             $_ -match 'transcript|raw-vtt|sources/notes|ink\.local|manuscript/|archive/'
         }
@@ -81,14 +92,13 @@ function CheckStoryRemote {
 function Commit($path, $msg, $label) {
     Push-Location $path
     try {
-        git add -A | Out-Null
-        if (@(git diff --cached --name-only).Count -eq 0) {
+        git-quiet add -A | Out-Null
+        if (@(git diff --cached --name-only 2>$null).Count -eq 0) {
             Write-Host "  $label - nothing to commit" -ForegroundColor DarkGray
             return $false
         }
-        git commit -q -m $msg
-        $ahead = git rev-list --count '@{u}..HEAD' 2>$null
-        git push -q 2>&1 | Out-Null
+        git-quiet commit -q -m $msg | Out-Null
+        git-quiet push -q | Out-Null
         Write-Host "  $label - committed and pushed" -ForegroundColor Green
         return $true
     } finally { Pop-Location }

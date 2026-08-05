@@ -91,18 +91,26 @@ for scene end.
 
 The receipt block. Then stop and wait.
 
-## Scene end
+## Scene end — automatic, not on request
 
-When the scene is done — the author says so, or the beat's exiting state is reached:
+The author does not ask for this. When the scene is done — they say so, or the beat's exiting
+state is reached — run the whole sequence:
 
 1. Run the full promotion path (`doc-protocol.md`)
 2. Update the beat's status in `_chapter.md`
 3. Update word count in `manuscript/_status.md`
-4. Update `sessions/_current.md`
-5. Give a 3–4 line scene summary: what happened, what changed for the protagonist, what it
+4. Run the scene-end boundary checks and fold findings into the receipt
+5. Update `sessions/_current.md`
+6. **Ship** — commit and push
+7. Give a 3–4 line scene summary: what happened, what changed for the protagonist, what it
    planted, what's next
 
 Then ask whether to continue to the next scene or stop.
+
+**At chapter end**, run `/chapter-check` before shipping.
+
+**Report it in the receipt** — `── PROMOTED ──`, `── CHECKED ──`, `── SHIPPED ──`. Unprompted is
+not the same as invisible.
 
 ## Revising existing prose
 

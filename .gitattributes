@@ -1,0 +1,13 @@
+# Normalise line endings so git stops warning about LF -> CRLF on Windows.
+* text=auto eol=lf
+
+# Windows-native scripts keep CRLF
+*.ps1 text eol=crlf
+
+# Binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.pdf binary

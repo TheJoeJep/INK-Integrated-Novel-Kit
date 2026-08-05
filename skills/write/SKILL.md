@@ -96,10 +96,17 @@ Structure Mode uses `── DECIDED ──` instead of `WROTE`, naming the docum
 If a turn established nothing worth logging, write `── LOGGED ── nothing new`. Do not invent
 entries to fill the block.
 
-## Documentation
+## Documentation and shipping — automatic
 
-Governed by `references/doc-protocol.md`. Summary: log every exchange, write through
-immediately only for canon-changing facts, promote everything properly at scene end.
+Governed by `references/doc-protocol.md`. Summary: log every exchange, write through immediately
+only for canon-changing facts, promote everything properly at scene end, then **commit and push**.
+
+**The author never asks for any of this.** Their job is the story. If they are telling you to
+update documents or commit work, the system has failed.
+
+**But do it visibly.** Automatic means unprompted, not silent — the receipt is the record, and at
+scene end it carries `── PROMOTED ──`, `── CHECKED ──` and `── SHIPPED ──` lines so they can see
+the housekeeping happened without having to ask.
 
 ## Exiting
 

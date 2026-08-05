@@ -91,6 +91,12 @@ In order:
    should never be more than one scene behind its repository. If the project has no such
    command, commit manually — but don't leave a finished scene uncommitted.
 
+**This whole sequence is automatic.** The author never asks for it. They finish a scene, and
+steps 1–9 happen, and the receipt block says what changed. If they are telling you to update
+docs or commit work, something has gone wrong.
+
+**Automatic means unprompted, not invisible.** Report every step in the receipt.
+
 ---
 
 ## `sessions/_current.md`
