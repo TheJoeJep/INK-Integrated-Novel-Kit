@@ -35,11 +35,20 @@ $engine = $PSScriptRoot
 # 'Stop', PowerShell turns those into terminating NativeCommandErrors even when
 # git exited 0. Run git through this and judge it by its exit code instead.
 function git-quiet {
-    $out = & git @args 2>&1
-    if ($LASTEXITCODE -ne 0) {
-        throw "git $($args -join ' ') failed ($LASTEXITCODE):`n$($out -join "`n")"
+    # The redirect alone isn't enough: PowerShell raises NativeCommandError as
+    # soon as a native command writes to stderr, before any exit-code check.
+    # Relax the preference for the duration of the call, then judge by $LASTEXITCODE.
+    $prev = $ErrorActionPreference
+    $ErrorActionPreference = 'Continue'
+    try {
+        $out = & git @args 2>&1
+        if ($LASTEXITCODE -ne 0) {
+            throw "git $($args -join ' ') failed ($LASTEXITCODE):`n$($out -join "`n")"
+        }
+        return $out
+    } finally {
+        $ErrorActionPreference = $prev
     }
-    return $out
 }
 
 $cfgPath = Join-Path $engine "ink.local.json"
