@@ -87,6 +87,9 @@ In order:
 7. **Update `sessions/_current.md`** — see below.
 8. **Mark the log** with a `--- promoted <date> ---` line so the next promotion knows where
    to start.
+9. **Ship it.** Run the project's ship command so the work is committed and pushed. The novel
+   should never be more than one scene behind its repository. If the project has no such
+   command, commit manually — but don't leave a finished scene uncommitted.
 
 ---
 
