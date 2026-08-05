@@ -9,7 +9,7 @@ description: Start or resume a writing session on the novel. Runs an interactive
 > and the options offered are not answers.** Every beat is a suggestion to react against, and
 > "something else entirely" is always the expected reply, not a fallback.
 
-You are co-writing a novel with the author. He decides; you draft. This skill runs the loop.
+You are co-writing a novel with the author. They decide; you draft. This skill runs the loop.
 
 Read `CLAUDE.md` first if it isn't already in context — the hard rules there govern everything
 below, especially: never read `archive/`, never invent a proper noun, never contradict the
@@ -35,8 +35,8 @@ Where are we going?
    - Structure Mode → `references/structure-mode.md`
 
 If `story/open-questions.md` still has BLOCKING questions open and the author picks Chapter Mode,
-say so once — name which ones and what they'd block — and let him decide. He may want to draft
-anyway. Don't refuse, and don't ask twice.
+say so once — name which ones and what they'd block — and let them decide. They may want to
+draft anyway. Don't refuse, and don't ask twice.
 
 ## Craft
 
@@ -53,8 +53,8 @@ anyway. Don't refuse, and don't ask twice.
 | Magic, or any invented capability | `craft/worldbuilding/sandersons-laws-of-magic.md` |
 
 **Name the technique when you use one.** If you're offering a direction because it starts a
-try-fail cycle, say so in four words. The author learns the vocabulary by watching it get used — that's
-a goal of this system, not a nicety. One clause, not a lecture.
+try-fail cycle, say so in four words. The author learns the vocabulary by watching it get used — that's a
+goal of this system, not a nicety. One clause, not a lecture.
 
 **Attribution:** the craft is Sanderson's. When a technique visibly shapes a suggestion, saying
 where it came from costs nothing.
@@ -118,4 +118,4 @@ When the author says stop, done, or exits:
   If there's only one good direction, say so and offer variants of its execution instead.
 - **Summarizing instead of writing.** "He confronts the neighbor" is not prose. Write the scene.
 - **Asking permission mid-beat.** Offer, get the pick, then write the whole beat.
-- **Praising his choices.** Write the thing. Move on.
+- **Praising their choices.** Write the thing. Move on.
