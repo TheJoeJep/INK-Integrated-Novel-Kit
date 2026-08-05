@@ -52,12 +52,12 @@ Write the variants out in full. A variant described is not a variant.
 is fixed and the question is tone, pacing, or angle. When in doubt, directions — cheaper to be
 wrong before the prose exists.
 
-### Step 2 — Take his answer
+### Step 2 — Take their answer
 
-He'll reply with a letter, or with something else entirely. Something else is normal and
-expected. Take it and write that. Do not re-offer, do not ask him to reconsider.
+They'll reply with a letter, or with something else entirely. Something else is normal and
+expected. Take it and write that. Do not re-offer, do not ask them to reconsider.
 
-If what he picks conflicts with the continuity ledger, say so *before* writing — name the
+If what they pick conflicts with the continuity ledger, say so *before* writing — name the
 entry, state the conflict in one sentence, ask whether to retcon it or work around it.
 
 ### Step 3 — Write

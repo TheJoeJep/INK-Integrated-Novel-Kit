@@ -109,7 +109,7 @@ memory of this conversation, can pick up without asking the author what was happ
 > dialing it, for what the record will say was four minutes."
 
 ## Pending
-Offered directions for beat 4. the author hadn't answered:
+Offered directions for beat 4. The author hasn't answered:
   A) He goes inside for supplies
   B) The dragon speaks
   C) A car slows on the street

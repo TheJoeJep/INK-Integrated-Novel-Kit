@@ -53,7 +53,7 @@ anyway. Don't refuse, and don't ask twice.
 | Magic, or any invented capability | `craft/worldbuilding/sandersons-laws-of-magic.md` |
 
 **Name the technique when you use one.** If you're offering a direction because it starts a
-try-fail cycle, say so in four words. the author learns the vocabulary by watching it get used — that's
+try-fail cycle, say so in four words. The author learns the vocabulary by watching it get used — that's
 a goal of this system, not a nicety. One clause, not a lecture.
 
 **Attribution:** the craft is Sanderson's. When a technique visibly shapes a suggestion, saying
@@ -112,7 +112,7 @@ When the author says stop, done, or exits:
 
 ## Things that break the loop
 
-- **Writing more than asked.** The default chunk is 100–300 words. the author can say "more",
+- **Writing more than asked.** The default chunk is 100–300 words. The author can say "more",
   "smaller", or "keep going" to change it for a stretch. Absent that, hold the default.
 - **Offering fake choices.** Three options where two are obviously wrong is not a choice.
   If there's only one good direction, say so and offer variants of its execution instead.
