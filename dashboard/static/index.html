@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Story Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+
+<nav id="rail">
+  <div class="brand" id="brand">Story</div>
+  <button data-view="read"    class="on">Read</button>
+  <button data-view="cast">Cast</button>
+  <button data-view="places">Places</button>
+  <button data-view="plot">Plot</button>
+  <button data-view="canon">Canon</button>
+  <div class="stats" id="stats"></div>
+  <div class="gen" id="gen"></div>
+</nav>
+
+<main id="main">
+  <div id="view-read" class="view on">
+    <div id="manuscript"></div>
+  </div>
+  <div id="view-cast"   class="view"><div class="cards" id="cast"></div></div>
+  <div id="view-places" class="view"><div class="cards" id="places"></div></div>
+  <div id="view-plot"   class="view"><div id="plot"></div></div>
+  <div id="view-canon"  class="view"><div id="canon"></div></div>
+</main>
+
+<aside id="side">
+  <div class="sidehead">
+    <span id="side-label">Context</span>
+    <span id="side-scene"></span>
+  </div>
+  <div id="side-body">
+    <p class="hint">Scroll the manuscript and this panel follows &mdash; showing whoever is
+    present, where it happens, and anything the scene mentions.</p>
+  </div>
+</aside>
+
+<div id="modal" hidden><div class="sheet"><button id="close">&times;</button><div id="sheet-body"></div></div></div>
+
+<script src="app.js"></script>
+</body></html>

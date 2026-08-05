@@ -1,0 +1,387 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skills Guide &mdash; Story Engine</title><style>
+:root{--bg:#faf9f7;--panel:#fff;--ink:#1a1a1a;--muted:#6b6560;--line:#e2ded8;--accent:#8a3324;
+--soft:#f3e9e6;--chip:#efece7;
+--t1:#2d5f3a;--t1b:#e4f0e6;--t2:#2d4f6b;--t2b:#e2ecf5;--t3:#7a5a1a;--t3b:#f5ecd8;--t4:#7a3a5a;--t4b:#f7e6ef}
+@media (prefers-color-scheme:dark){:root{--bg:#16151a;--panel:#1e1d23;--ink:#eceaf0;--muted:#9a95a2;
+--line:#33313b;--accent:#e2836c;--soft:#2c2226;--chip:#2a2830;
+--t1:#9dd6a8;--t1b:#1d2f22;--t2:#8fc0e8;--t2b:#1a2733;--t3:#e0c07a;--t3b:#302716;--t4:#e2a0c4;--t4b:#2e1c26}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 ui-serif,Georgia,serif}
+.wrap{max-width:1140px;margin:0 auto;padding:34px 20px 80px}
+header{border-bottom:2px solid var(--line);padding-bottom:22px;margin-bottom:26px}
+h1{font-size:2rem;margin:0 0 8px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:.92rem;font-family:ui-sans-serif,system-ui,sans-serif;max-width:70ch}
+h2{font-size:1.3rem;margin:0 0 3px;letter-spacing:-.01em}
+.blurb{color:var(--muted);font-size:.85rem;font-family:ui-sans-serif,system-ui,sans-serif;margin:0 0 14px}
+.phase{margin-bottom:38px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--tc);
+border-radius:9px;padding:14px 16px}
+.card.t1{--tc:var(--t1)}.card.t2{--tc:var(--t2)}.card.t3{--tc:var(--t3)}.card.t4{--tc:var(--t4)}
+.chead{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:7px}
+.cmd{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:1rem;font-weight:600;
+background:var(--soft);color:var(--accent);padding:2px 8px;border-radius:5px}
+.tier{font-family:ui-sans-serif,system-ui,sans-serif;font-size:.62rem;letter-spacing:.05em;
+text-transform:uppercase;padding:3px 7px;border-radius:4px;margin-left:auto;white-space:nowrap}
+.tier.t1{background:var(--t1b);color:var(--t1)}.tier.t2{background:var(--t2b);color:var(--t2)}
+.tier.t3{background:var(--t3b);color:var(--t3)}.tier.t4{background:var(--t4b);color:var(--t4)}
+.what{font-size:.94rem}
+.when{margin-top:8px;font-size:.85rem;color:var(--muted);
+font-family:ui-sans-serif,system-ui,sans-serif}
+.lbl{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+display:block;margin-bottom:2px;font-family:ui-sans-serif,system-ui,sans-serif}
+.more{margin-top:9px}
+.more summary{font-family:ui-sans-serif,system-ui,sans-serif;font-size:.74rem;color:var(--muted);
+cursor:pointer;list-style:none}
+.more summary::-webkit-details-marker{display:none}
+.more summary::before{content:"\25B8 ";font-size:.8em}
+.more[open] summary::before{content:"\25BE "}
+.tq{margin-top:8px;font-size:.85rem;color:var(--muted);border-left:2px solid var(--line);
+padding-left:10px}
+.srcs{margin-top:8px}
+.srcs code{display:inline-block;font-size:.68rem;background:var(--chip);color:var(--muted);
+padding:2px 6px;border-radius:3px;margin:2px 3px 0 0;font-family:ui-monospace,Menlo,monospace}
+.tiers{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:0 0 30px}
+.tiers h3{margin:0 0 10px;font-size:1.05rem}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:ui-sans-serif,system-ui,sans-serif;font-size:.68rem;letter-spacing:.05em;
+text-transform:uppercase;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+.badge{font-family:ui-sans-serif,system-ui,sans-serif;font-size:.62rem;letter-spacing:.05em;
+text-transform:uppercase;padding:3px 7px;border-radius:4px;white-space:nowrap}
+.flow{background:var(--soft);border-radius:10px;padding:16px 20px;margin:0 0 30px;
+font-family:ui-sans-serif,system-ui,sans-serif;font-size:.88rem}
+.flow code{background:var(--panel);color:var(--accent);padding:1px 6px;border-radius:4px;
+font-family:ui-monospace,Menlo,monospace}
+.flow ol{margin:8px 0 0;padding-left:20px}.flow li{margin-bottom:5px}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);
+font-size:.82rem;font-family:ui-sans-serif,system-ui,sans-serif}
+@media print{.more{display:none}.card{break-inside:avoid}}
+</style></head><body>
+<div class="wrap">
+<header><h1>Skills Guide</h1>
+<div class="sub">37 skills for writing a novel, built on a craft base extracted from 39
+writing lectures. Type the command in chat. Each skill loads only the craft documents it needs,
+so you never carry the whole base while drafting.</div></header>
+
+<div class="tiers"><h3>Read the tier before you trust the output</h3>
+<p class="blurb">Every skill declares its tier when you run it. This is the most important thing
+on this page &mdash; a system equally confident about everything will mislead you.</p>
+<table>
+<tr><th>Tier</th><th>What it does</th><th>How much to trust it</th></tr>
+<tr><td><span class="badge tier t1">1 &middot; Mechanical</span></td>
+<td>Verifies against a documented rule</td>
+<td><b>High.</b> There's a right answer. It reports findings flatly and never fixes anything</td></tr>
+<tr><td><span class="badge tier t2">2 &middot; Diagnostic</span></td>
+<td>Maps a symptom to likely causes using documented base rates</td>
+<td><b>Good.</b> Gives ranked hypotheses, not verdicts. You confirm which is real</td></tr>
+<tr><td><span class="badge tier t3">3 &middot; Procedural</span></td>
+<td>Runs a documented multi-stage process in order</td>
+<td><b>Good for the process.</b> The stages are the value; it won't let you skip ahead</td></tr>
+<tr><td><span class="badge tier t4">4 &middot; Generative</span></td>
+<td>Produces raw material</td>
+<td><b>Lowest.</b> It says so. Output is material to react against, never an answer</td></tr>
+</table></div>
+
+<div class="flow"><b>If you're starting from nothing</b>
+<ol>
+<li><code>/brainstorm</code> &rarr; <code>/new-story</code> &rarr; <code>/premise-test</code>
+&mdash; is this a novel or just a setting?</li>
+<li><code>/magic-system</code>, <code>/worldbuild</code>, <code>/new-character</code>
+&mdash; build what the story needs, not everything</li>
+<li><code>/outline</code> or <code>/structure</code> &mdash; as much plan as you actually want</li>
+<li><code>/write</code> &mdash; the drafting loop. This is where most time goes</li>
+<li><code>/threads</code>, <code>/promises</code>, <code>/plants</code> &mdash; run these on the
+<i>outline</i>, before drafting. They work without prose</li>
+<li>Something's wrong &rarr; <code>/diagnose</code>. It's the front door and routes to the rest</li>
+<li>Draft done &rarr; <code>/revise</code> &mdash; and it will stop you polishing too early</li>
+</ol></div>
+
+<section class="phase">
+<h2>Starting</h2><p class="blurb">Idea to premise, before there's a project</p>
+<div class="grid"><div class="card t4">
+<div class="chead"><code class="cmd">/new-story</code>
+<span class="tier t4">Tier 4 &middot; Generative</span></div>
+<div class="what">Take an idea from spark to premise, then test it against Sanderson's three-pillar readiness gate before it becomes a project.</div>
+<div class="when"><span class="lbl">when</span>Use when starting a brand-new story from an idea, when deciding whether a concept is ready to be a novel, when story/premise.md doesn't exist yet, or when the author asks "is this enough to start on?"</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 4 — generative.</b> The readiness gate and its threshold are Sanderson's. Everything I draft toward a premise — wording, pillar ideas, the "this meets this" line — is <b>raw material for your judgement, not an answer.</b> Where a pillar is thin, that's the finding. I won't invent an idea to fill it.</div><div class="srcs"><span class="lbl">reads</span><code>craft/process/idea-generation.md</code></div></details>
+</div><div class="card t4">
+<div class="chead"><code class="cmd">/brainstorm</code>
+<span class="tier t4">Tier 4 &middot; Generative</span></div>
+<div class="what">Generate atomic ideas and combine them into strange attractors — the raw fragments a premise gets built from.</div>
+<div class="when"><span class="lbl">when</span>Use when starting from nothing, when an idea feels thin or generic, when looking for a "this meets this" combination, or when the author wants options instead of one finished concept. Not for developing a premise already in hand — see /new-story for that.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 4 — generative.</b> Every idea below is a fragment to react to, reject, or recombine — <b>not a premise, and not a recommendation.</b> I keep them deliberately unfinished. Finishing one into a premise is `/new-story`'s job, done on purpose, later.</div><div class="srcs"><span class="lbl">reads</span><code>craft/process/idea-generation.md</code></div></details>
+</div><div class="card t2">
+<div class="chead"><code class="cmd">/premise-test</code>
+<span class="tier t2">Tier 2 &middot; Diagnostic</span></div>
+<div class="what">Run the six consequential questions against a premise to find out whether it's a novel or a setting.</div>
+<div class="when"><span class="lbl">when</span>Use when a premise is in hand and needs pressure-testing, before outlining, when a story idea feels thin without being able to say why, or when the author asks whether a concept can actually carry a book.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 2 — diagnostic.</b> The six questions, and the transplant read on question five, are the test. My score on how well the premise clears each one is a <b>ranked hypothesis, not a verdict</b> — the author is the one who knows whether a dilemma is genuinely unique to this premise.</div><div class="srcs"><span class="lbl">reads</span><code>craft/process/idea-generation.md</code></div></details>
+</div><div class="card t2">
+<div class="chead"><code class="cmd">/scale</code>
+<span class="tier t2">Tier 2 &middot; Diagnostic</span></div>
+<div class="what">Calibrate a book's length against its scope, using the ~120,000-word threshold where readers expect escalated stakes or breadth.</div>
+<div class="when"><span class="lbl">when</span>Use when a draft or outline feels too big or too small for its content, when deciding a target length for a new project, when a manuscript is running long, or when chapter lengths feel arbitrary rather than chosen.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 2 — diagnostic.</b> The thresholds and reference figures are Sanderson's benchmarks. Whether <i>this</i> book's scope actually matches its length is a <b>ranked hypothesis, not a certification</b> — the author confirms it against what the story is actually about.</div><div class="srcs"><span class="lbl">reads</span><code>craft/structure/scale-and-length.md</code></div></details>
+</div></div></section><section class="phase">
+<h2>Building</h2><p class="blurb">Characters, places, factions, worlds</p>
+<div class="grid"><div class="card t4">
+<div class="chead"><code class="cmd">/new-character</code>
+<span class="tier t4">Tier 4 &middot; Generative</span></div>
+<div class="what">Build a new character through a structured interview and write their dossier.</div>
+<div class="when"><span class="lbl">when</span>Use when adding any significant character, when an existing character feels flat or generic, or when the author asks for help developing someone. Also use when a character needs an arc designed or their position in the cast worked out.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 4 — generative.</b> This produces <b>raw material for your judgement, not answers.</b> The questions are Sanderson's; the suggestions are mine and should be treated as starting points to react against. Where I offer options, pick one or reject all of them.</div><div class="srcs"><span class="lbl">reads</span><code>character/motivation-personality-values.md</code><code>character/proactive-relatable-capable.md</code><code>character/arcs-and-iconic-characters.md</code></div></details>
+</div><div class="card t3">
+<div class="chead"><code class="cmd">/character-arc</code>
+<span class="tier t3">Tier 3 &middot; Procedural</span></div>
+<div class="what">Design or diagnose a character arc — which axis moves, what type of arc it is, and whether it's earned.</div>
+<div class="when"><span class="lbl">when</span>Use when planning a character's development, when an arc doesn't land, when deciding whether a character needs an arc at all, or when planning growth across a series.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 3 — procedural.</b> The taxonomy and tests are Sanderson's. Specific arc content I propose is raw material.</div><div class="srcs"><span class="lbl">reads</span><code>craft/character/arcs-and-iconic-characters.md</code><code>craft/character/proactive-relatable-capable.md</code></div></details>
+</div><div class="card t4">
+<div class="chead"><code class="cmd">/new-place</code>
+<span class="tier t4">Tier 4 &middot; Generative</span></div>
+<div class="what">Build a new place through a structured interview and write its dossier.</div>
+<div class="when"><span class="lbl">when</span>Use when adding any significant location, when an existing setting reads as generic or interchangeable, or when the author asks for help developing where a scene happens. Also use when a place's Visual block needs filling in for image generation.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 4 — generative.</b> This produces <b>raw material for your judgement, not answers.</b> The sensory and characterization principles are Sanderson's; the specific suggestions are mine and should be treated as starting points to react against. Where I offer options, pick one or reject all of them.</div><div class="srcs"><span class="lbl">reads</span><code>worldbuilding/worldbuilding-fundamentals.md</code></div></details>
+</div><div class="card t4">
+<div class="chead"><code class="cmd">/new-faction</code>
+<span class="tier t4">Tier 4 &middot; Generative</span></div>
+<div class="what">Build a new faction through a structured interview and write its dossier.</div>
+<div class="when"><span class="lbl">when</span>Use when adding a faction to the story, when an existing faction feels invincible, toothless, or interchangeable, or when the author asks for help working out a group's agenda and structure. Also use when a faction needs its limits defined before it can create real tension.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 4 — generative.</b> This produces <b>raw material for your judgement, not answers.</b> The limits-over-capabilities principle is Sanderson's Second Law applied to institutions rather than magic; the specific suggestions are mine and should be treated as starting points to react against. Where I offer options, pick one or reject all of them.</div><div class="srcs"><span class="lbl">reads</span><code>worldbuilding/sandersons-laws-of-magic.md</code></div></details>
+</div><div class="card t3">
+<div class="chead"><code class="cmd">/worldbuild</code>
+<span class="tier t3">Tier 3 &middot; Procedural</span></div>
+<div class="what">Build or audit a story's setting using the three worldbuilding components, worldbuilder's disease, and the hollow iceberg.</div>
+<div class="when"><span class="lbl">when</span>Use when starting a new setting, when worldbuilding is consuming time that should go into the manuscript, when a world feels detailed but hollow, or when deciding how much of a setting actually needs building versus implying.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 3 — procedural.</b> The components, worldbuilder's disease, and the hollow iceberg are Sanderson's. Specific setting content I propose is raw material.</div><div class="srcs"><span class="lbl">reads</span><code>craft/worldbuilding/worldbuilding-fundamentals.md</code></div></details>
+</div><div class="card t3">
+<div class="chead"><code class="cmd">/real-world</code>
+<span class="tier t3">Tier 3 &middot; Procedural</span></div>
+<div class="what">Build or stress-test a contemporary, urban, or historical setting where a reader can fact-check you.</div>
+<div class="when"><span class="lbl">when</span>Use when writing a story set in a real place or period, when a viewpoint character encounters a real-world domain they shouldn't plausibly know, when deciding how much research is enough before drafting, or when borrowing from a real culture or belief system.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 3 — procedural.</b> The core asymmetry, bonehead characters, and the research model are Sanderson's. Specific research or characterization suggestions I make are raw material. <b>One section of this process — the masquerade problem — has no craft-base coverage, and this skill says so rather than filling the gap.</b></div><div class="srcs"><span class="lbl">reads</span><code>craft/worldbuilding/real-world-settings.md</code></div></details>
+</div><div class="card t3">
+<div class="chead"><code class="cmd">/magic-system</code>
+<span class="tier t3">Tier 3 &middot; Procedural</span></div>
+<div class="what">Design or stress-test a magic system, technology, or any invented capability using Sanderson's Laws.</div>
+<div class="when"><span class="lbl">when</span>Use when creating a magic system, when an existing one feels arbitrary or overpowered, when magic is solving problems too easily, or when a speculative element needs limits and costs. Also applies to invented technology, institutions, and abilities.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 3 — procedural.</b> The Laws and their tests are Sanderson's. Specific system suggestions are mine and marked as raw material.</div><div class="srcs"><span class="lbl">reads</span><code>craft/worldbuilding/sandersons-laws-of-magic.md</code></div></details>
+</div></div></section><section class="phase">
+<h2>Structuring</h2><p class="blurb">Outline, models, beats, chapters</p>
+<div class="grid"><div class="card t3">
+<div class="chead"><code class="cmd">/outline</code>
+<span class="tier t3">Tier 3 &middot; Procedural</span></div>
+<div class="what">Build a story outline matched to how much you plan versus discover — points on the map for gardeners, a denser version for architects, anything between.</div>
+<div class="when"><span class="lbl">when</span>Use when starting a new project's structure, when a discovery draft has drifted and needs waypoints, when foreshadowing needs planning ahead of time, or when the author asks how detailed an outline should be. Also use when deciding how much to plan before drafting begins.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 3 — procedural.</b> This runs documented stages in order. Where I'm suggesting actual plot content for a point, I'll say so — that's raw material, not the check.</div><div class="srcs"><span class="lbl">reads</span><code>craft/structure/try-fail-cycles.md</code><code>craft/structure/structure-models.md</code></div></details>
+</div><div class="card t2">
+<div class="chead"><code class="cmd">/structure</code>
+<span class="tier t2">Tier 2 &middot; Diagnostic</span></div>
+<div class="what">Pick a structure model by the symptom it fixes, not by preference — Story Circle, three-act/midpoint, Major Dramatic Question, or try-fail.</div>
+<div class="when"><span class="lbl">when</span>Use when a draft or outline is wrong in a way you can't name, when character growth feels unearned, when the middle feels shapeless, when a subplot feels disconnected from the main story, or when nothing seems to be progressing. Also use when the author is already drawn to a specific model and wants it checked against the actual problem first.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 2 — diagnostic.</b> These are <b>ranked hypotheses tied to a symptom, not a verdict.</b> The author confirms which model actually fits before anything gets restructured around it.</div><div class="srcs"><span class="lbl">reads</span><code>craft/structure/structure-models.md</code><code>craft/structure/try-fail-cycles.md</code></div></details>
+</div><div class="card t3">
+<div class="chead"><code class="cmd">/genre-mine</code>
+<span class="tier t3">Tier 3 &middot; Procedural</span></div>
+<div class="what">Build a structure from a narrow sub-sub-genre you love, instead of borrowing a general framework.</div>
+<div class="when"><span class="lbl">when</span>Use when none of the standard models fit, when a subplot has no shape and nothing off-the-shelf applies, when the author names a specific favorite kind of story they want to study and steal from, or when the goal is a structure nobody else has. Also use when the author asks how to derive a plot shape rather than inherit one.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 3 — procedural.</b> Stages run in order and none get skipped, especially the slow one. Where I suggest a transplant or a beat, that's raw material — the derivation is the process, the content is yours.</div><div class="srcs"><span class="lbl">reads</span><code>craft/structure/genre-structure-mining.md</code></div></details>
+</div><div class="card t3">
+<div class="chead"><code class="cmd">/beat</code>
+<span class="tier t3">Tier 3 &middot; Procedural</span></div>
+<div class="what">Design a single story beat — its obstacle, what it forces, and what it plants and pays off. Use before writing a beat into an outline or chapter plan, when a beat feels like an event happening rather than a story beat, when deciding whether an obstacle earns its place, or when checking what a beat sets up and pays off. Also use when the author asks whether a plot point is doing enough work to justify itself.</div>
+
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 3 — procedural.</b> Stages run in order. The obstacle rule at Stage 1 gates everything after it — a beat that fails it doesn't get refined, it gets flagged.</div><div class="srcs"><span class="lbl">reads</span><code>craft/structure/structure-models.md</code><code>craft/structure/try-fail-cycles.md</code><code>craft/plot/payoff-and-twists.md</code></div></details>
+</div><div class="card t3">
+<div class="chead"><code class="cmd">/chapter-plan</code>
+<span class="tier t3">Tier 3 &middot; Procedural</span></div>
+<div class="what">Build a chapter's shape against the _chapter.md template — POV, chapter goal, entering and exiting state, and the beat sheet.</div>
+<div class="when"><span class="lbl">when</span>Use when starting a new chapter, when a chapter's shape feels unclear before drafting, when deciding how long a chapter should run, or when an existing chapter's beats need re-sequencing. Also use when the author asks how many scenes a chapter needs or where its natural break point falls.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 3 — procedural.</b> Follows the `_chapter.md` template's fields in order. An unclear field is a finding, not something to skip past.</div><div class="srcs"><span class="lbl">reads</span><code>templates/chapter.md</code><code>craft/structure/scale-and-length.md</code><code>craft/plot/progress-and-signposting.md</code></div></details>
+</div></div></section><section class="phase">
+<h2>Drafting</h2><p class="blurb">Writing the prose</p>
+<div class="grid"><div class="card t4">
+<div class="chead"><code class="cmd">/write</code>
+<span class="tier t4">Tier 4 &middot; Generative</span></div>
+<div class="what">Start or resume a writing session on the Modern Dragon Riders novel. Runs an interactive turn-by-turn loop in one of two modes — Chapter Mode for drafting prose, Structure Mode for story decisions and consistency audits. Use whenever Joe wants to work on the book, write a scene, resolve an open question, or check the project for contradictions.</div>
+
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 4 — generative</b>, wrapped in a procedure. The loop's structure is reliable; <b>the prose and the options offered are not answers.</b> Every beat is a suggestion to react against, and "something else entirely" is always the expected reply, not a fallback.</div></details>
+</div><div class="card t3">
+<div class="chead"><code class="cmd">/scene</code>
+<span class="tier t3">Tier 3 &middot; Procedural</span></div>
+<div class="what">Design or repair a single scene — its subject, obstacle, conflict, and ending. Use before drafting a scene, when a scene feels inert or pointless, when you can't tell whether a scene earns its place, or when deciding what a scene should do. Also use when the author asks whether to cut a scene.</div>
+
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 3 — procedural.</b> This runs documented checks in order. Where I suggest content rather than check structure, I'll say so.</div><div class="srcs"><span class="lbl">reads</span><code>craft/scene/scene-craft.md</code><code>craft/structure/structure-models.md</code></div></details>
+</div><div class="card t3">
+<div class="chead"><code class="cmd">/dialogue</code>
+<span class="tier t3">Tier 3 &middot; Procedural</span></div>
+<div class="what">Diagnose or design dialogue using the MICRO framework.</div>
+<div class="when"><span class="lbl">when</span>Use when dialogue reads stilted, wooden or expository, when characters sound alike, when a conversation scene feels inert, or before writing a scene that turns on what people say. Also use when a reader reports that dialogue "doesn't feel real".</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 3 — procedural</b>, with a diagnostic front end. The framework and its ranking are Sanderson's; specific rewrites I offer are mine and marked.</div><div class="srcs"><span class="lbl">reads</span><code>craft/prose/dialogue.md</code></div></details>
+</div></div></section><section class="phase">
+<h2>Checking</h2><p class="blurb">Mechanical verification &mdash; these have right answers</p>
+<div class="grid"><div class="card t1">
+<div class="chead"><code class="cmd">/threads</code>
+<span class="tier t1">Tier 1 &middot; Mechanical</span></div>
+<div class="what">Audit every open narrative thread and verify each one closes, in the right order.</div>
+<div class="when"><span class="lbl">when</span>Use when an ending feels unsatisfying, when a draft or outline feels like it's missing something you can't name, or before calling a chapter, act, or book finished. Also use when the author asks about loose ends, dangling plots, or unresolved subplots.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 1 — mechanical check.</b> This is bookkeeping against a documented rule, not a judgement call. Report findings flatly. If a thread is unclosed, say so; don't soften it, and don't speculate about whether it "works anyway" unless asked.</div><div class="srcs"><span class="lbl">reads</span><code>short-fiction/short-fiction.md</code><code>structure/the-box.md</code><code>plot/promise-progress-payoff.md</code></div></details>
+</div><div class="card t1">
+<div class="chead"><code class="cmd">/promises</code>
+<span class="tier t1">Tier 1 &middot; Mechanical</span></div>
+<div class="what">Audit every promise the story makes to the reader and check whether each one is paid off.</div>
+<div class="when"><span class="lbl">when</span>Use when an ending feels unearned or predictable, when readers report being misled or disappointed, when checking whether an opening sets up the right expectations, or before finishing a draft. Also use when the author asks about setup and payoff, foreshadowing, or whether the book delivers what it advertises.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 1 — mechanical check</b>, with one judgement call flagged inline. Finding promises and matching them to payoffs is bookkeeping. Deciding whether a payoff is <i>satisfying</i> is not — mark that separately.</div><div class="srcs"><span class="lbl">reads</span><code>plot/promises.md</code><code>plot/payoff-and-twists.md</code><code>reference/problem-to-technique.md</code></div></details>
+</div><div class="card t1">
+<div class="chead"><code class="cmd">/continuity</code>
+<span class="tier t1">Tier 1 &middot; Mechanical</span></div>
+<div class="what">Check prose and documentation against the continuity ledger for contradictions. Use after drafting, before finishing a chapter, when revising something already written, or when the author suspects an inconsistency. Also use when a structural change might invalidate text that already exists.</div>
+
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 1 — mechanical check.</b> Comparing statements against a ledger is verification, not judgement. Report contradictions flatly with both sources cited.</div></details>
+</div><div class="card t1">
+<div class="chead"><code class="cmd">/names</code>
+<span class="tier t1">Tier 1 &middot; Mechanical</span></div>
+<div class="what">Check every proper noun and coined term in the manuscript against the canonical names list, and check that terms are used by the right characters. Use after drafting, when adding a character or place, when naming decisions have changed, or before a revision pass. Also use when the author asks about naming consistency, placeholder names, or in-world terminology.</div>
+
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 1 — mechanical check.</b> Matching nouns against a list is verification. The one judgement call — whether a term suits its speaker — is marked separately.</div><div class="srcs"><span class="lbl">reads</span><code>character/voice-quirks-and-dialogue.md</code></div></details>
+</div><div class="card t1">
+<div class="chead"><code class="cmd">/plants</code>
+<span class="tier t1">Tier 1 &middot; Mechanical</span></div>
+<div class="what">Audit setups and payoffs — find plants that never pay off and payoffs that were never planted. Use before finishing a draft, when a reveal feels unearned or arbitrary, when checking whether foreshadowing lands, or when a structural change might have orphaned a setup. Also use when the author asks about foreshadowing or setup.</div>
+
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 1 — mechanical check.</b> Matching setups to payoffs is bookkeeping. Whether a plant is <i>subtle enough</i> is not — marked separately.</div><div class="srcs"><span class="lbl">reads</span><code>craft/story/structural-rules.md</code><code>craft/plot/payoff-and-twists.md</code></div></details>
+</div><div class="card t1">
+<div class="chead"><code class="cmd">/visuals</code>
+<span class="tier t1">Tier 1 &middot; Mechanical</span></div>
+<div class="what">Find every character, place, and faction that appears in the manuscript prose but has an empty or stale Visual block in its dossier — the blocks that feed later AI image generation. Use before finishing a chapter, when adding a new character or place, when preparing for image generation, or when the author asks what's missing from a dossier. Also use as a running doc-maintenance backlog.</div>
+
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 1 — mechanical check.</b> Whether a `## Visual` block exists, and whether what the prose established is actually recorded in it, is verification against a template requirement — not judgement. Report findings flatly.</div><div class="srcs"><span class="lbl">reads</span><code>templates/character.md</code><code>templates/place.md</code><code>templates/faction.md</code></div></details>
+</div></div></section><section class="phase">
+<h2>Diagnosing</h2><p class="blurb">Symptom to cause, using documented base rates</p>
+<div class="grid"><div class="card t2">
+<div class="chead"><code class="cmd">/diagnose</code>
+<span class="tier t2">Tier 2 &middot; Diagnostic</span></div>
+<div class="what">Work out why something in the story isn't working, starting from the symptom.</div>
+<div class="when"><span class="lbl">when</span>Use when the author says a scene is flat, boring, confusing, unsatisfying, slow, or that a character doesn't work — or when a beta reader reports a problem and the cause is unclear. The general entry point for any "why isn't this working?" question.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 2 — diagnostic.</b> I map symptoms to likely causes using documented base rates. These are <b>ranked hypotheses, not verdicts.</b> The author confirms which one is real.</div><div class="srcs"><span class="lbl">reads</span><code>reference/problem-to-technique.md</code></div></details>
+</div><div class="card t2">
+<div class="chead"><code class="cmd">/pacing</code>
+<span class="tier t2">Tier 2 &middot; Diagnostic</span></div>
+<div class="what">Audit where progress becomes invisible to the reader and where pacing goes uniform.</div>
+<div class="when"><span class="lbl">when</span>Use when the middle sags, when a reader reports getting bored or skimming, when a section feels slow, or before finishing an act. Also use when the author asks about pacing, momentum, or signposting.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 2 — diagnostic</b>, with a mechanical core. Counting signposts is verification; judging whether the pace <i>feels</i> right is not, and I'll mark that.</div><div class="srcs"><span class="lbl">reads</span><code>craft/plot/progress-and-signposting.md</code><code>craft/structure/scale-and-length.md</code></div></details>
+</div><div class="card t2">
+<div class="chead"><code class="cmd">/motivation</code>
+<span class="tier t2">Tier 2 &middot; Diagnostic</span></div>
+<div class="what">Check every significant character's motivation against their actions.</div>
+<div class="when"><span class="lbl">when</span>Use when a character feels wooden, flat, unlikable or unconvincing, when a reader says a character "just didn't work", when someone acts out of character, or before drafting a chapter with several people in it.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 2 — diagnostic</b>, with a documented base rate that makes it unusually reliable for a Tier 2 skill.</div><div class="srcs"><span class="lbl">reads</span><code>craft/character/motivation-personality-values.md</code><code>craft/character/proactive-relatable-capable.md</code></div></details>
+</div><div class="card t1">
+<div class="chead"><code class="cmd">/viewpoint-check</code>
+<span class="tier t1">Tier 1/2 &middot; Mechanical / Diagnostic</span></div>
+<div class="what">Check point-of-view discipline against the declared mode's own rules — detect mid-scene head-hopping, drift between narrator modes, and viewpoints carrying no promise of their own.</div>
+<div class="when"><span class="lbl">when</span>Use when a scene reads distant, confusing, or inconsistent in perspective, when introducing a second viewpoint character, before drafting a scene with a mode shift, or when the author asks whether a POV choice or a withholding is working.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 1/2 hybrid.</b> Detecting head-hopping, mode drift, and a viewpoint with no promise of its own is mechanical — the mode either holds or it doesn't. Whether a withholding reads as a legitimate technique or as a cheat, and whether a viewpoint's promise is strong enough, are judgement calls — marked separately.</div><div class="srcs"><span class="lbl">reads</span><code>craft/viewpoint/viewpoint.md</code></div></details>
+</div><div class="card t1">
+<div class="chead"><code class="cmd">/gorillas</code>
+<span class="tier t1">Tier 1/2 &middot; Mechanical / Diagnostic</span></div>
+<div class="what">Find "gorillas in the phone booth" — unsignalled oddities that pull a reader out of the story to ask a question the narrative hasn't promised to answer. Use after drafting a scene, when a beta reader reports getting confused or distracted at a specific spot, before finishing a chapter, or when the author asks whether something needs a lantern hung on it. Also use to judge whether a recurring oddity should become the book's tone promise instead of being explained away.</div>
+
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 1/2 hybrid.</b> Finding a candidate — an unexplained, unacknowledged oddity dropped into a scene — is mechanical: either the text acknowledges it or it doesn't. Whether it actually kicks readers out, and which fix suits it, is judgement — marked separately.</div><div class="srcs"><span class="lbl">reads</span><code>craft/scene/scene-craft.md</code></div></details>
+</div></div></section><section class="phase">
+<h2>Revising</h2><p class="blurb">Structured passes over a finished draft</p>
+<div class="grid"><div class="card t3">
+<div class="chead"><code class="cmd">/revise</code>
+<span class="tier t3">Tier 3 &middot; Procedural</span></div>
+<div class="what">Run a structured revision pass on a draft using the five-stage framework.</div>
+<div class="when"><span class="lbl">when</span>Use when a draft is finished and the author doesn't know where to start, when revision has stalled, or when "fix the novel" is too big a task to begin. Also use when the author asks how to revise, what order to do things in, or what to do with alpha and beta reader feedback.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 3 — procedural.</b> This runs a documented multi-stage process in order. The stages are not optional and not reorderable — that's the whole value.</div><div class="srcs"><span class="lbl">reads</span><code>craft/revision/revision-and-diagnosis.md</code></div></details>
+</div><div class="card t3">
+<div class="chead"><code class="cmd">/revision-map</code>
+<span class="tier t3">Tier 3 &middot; Procedural</span></div>
+<div class="what">Build the tiered revision to-do list used by stage 2.0 of the five-stage framework — top tier (pervasive, book-spanning), middle (scene/sequence), bottom (local, checkable).</div>
+<div class="when"><span class="lbl">when</span>Use when starting self-revision after a straight-through draft, when alpha feedback has arrived and needs sorting, when revision feels too big to start, or before running /revise at stage 2.0 or after an alpha read.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 3 — procedural.</b> This runs a documented multi-stage process — gather, sort, sequence — in that order. The stages aren't optional and the tiers aren't a suggestion: working out of order wastes work, which is the whole reason this exists as its own step.</div><div class="srcs"><span class="lbl">reads</span><code>craft/revision/revision-and-diagnosis.md</code></div></details>
+</div><div class="card t2">
+<div class="chead"><code class="cmd">/beta-read</code>
+<span class="tier t2">Tier 2/4 &middot; Diagnostic / Generative</span></div>
+<div class="what">Read a draft as a reader and report back — either as an alpha reader who diagnoses problems, or as a beta reader who reports pure reaction.</div>
+<div class="when"><span class="lbl">when</span>Use when the author wants outside eyes on drafted prose, wants to know how something lands, or is preparing for real readers. Always ask which mode is wanted.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 2/4 — depends on the mode</b>, and the difference is the entire point of this skill. <b>Alpha mode</b> is diagnostic and reasonably reliable. <b>Beta mode</b> is a simulated reaction and is the weakest thing this system does — I am not your audience.</div><div class="srcs"><span class="lbl">reads</span><code>craft/revision/revision-and-diagnosis.md</code><code>craft/process/feedback-and-critique.md</code></div></details>
+</div><div class="card t3">
+<div class="chead"><code class="cmd">/polish</code>
+<span class="tier t3">Tier 3 &middot; Procedural</span></div>
+<div class="what">Run the 5.0 polish pass — cut roughly 10% of length, eliminate passive voice, upgrade weak verbs to strong ones, then copyedit and proofread. Refuses to run if structure isn't locked and explains why, unless the author overrules. Use only after the revision map's top and middle tiers are resolved and any beta-driven changes are in, when a chapter is ready for a final line pass, or when the author explicitly asks to polish prose.</div>
+
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 3 — procedural, and this one has a gate.</b> It refuses to run on structurally unresolved material and explains the cost before the author overrules it. Once running, it follows the documented order — cut, then passive voice, then weak verbs, then copyedit — and doesn't reorder it.</div><div class="srcs"><span class="lbl">reads</span><code>craft/revision/revision-and-diagnosis.md</code></div></details>
+</div></div></section><section class="phase">
+<h2>Finishing</h2><p class="blurb">Getting it in front of people</p>
+<div class="grid"><div class="card t4">
+<div class="chead"><code class="cmd">/pitch</code>
+<span class="tier t4">Tier 4 &middot; Generative</span></div>
+<div class="what">Draft two versions of the verbal pitch — genre-familiar, leading with the premise inversion, and genre-unfamiliar, leading with character — plus deliberately chosen comp titles and a brief credibility line.</div>
+<div class="when"><span class="lbl">when</span>Use when preparing to pitch at a conference, to an agent or editor in person, to a genre-unfamiliar friend or family reader, or when practicing how to explain the book out loud.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 4 — generative.</b> Everything below is <b>raw material to react against, not a finished pitch.</b> Where this offers phrasing, treat it as a first attempt at a shape, not a script to memorize.</div><div class="srcs"><span class="lbl">reads</span><code>craft/publishing/publishing.md</code></div></details>
+</div><div class="card t4">
+<div class="chead"><code class="cmd">/query</code>
+<span class="tier t4">Tier 4 &middot; Generative</span></div>
+<div class="what">Draft a query letter — hook, comp titles, brief credentials, and housekeeping (title, word count, genre).</div>
+<div class="when"><span class="lbl">when</span>Use when preparing to query literary agents, when the manuscript is finished and ready to submit, or when practicing the hook paragraph. Flags that specific market conventions drift and directs the author to the target agent's current guidelines rather than asserting norms.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 4 — generative, with a documented-staleness warning attached.</b> The four-part <i>shape</i> of a query is durable. The <i>specifics</i> — expected word-count ranges, simultaneous-submission norms, formatting quirks, whether comps are wanted — drift by year and by agency, and the craft base behind this skill is a dated snapshot, not live market data.</div><div class="srcs"><span class="lbl">reads</span><code>craft/publishing/publishing.md</code></div></details>
+</div><div class="card t4">
+<div class="chead"><code class="cmd">/synopsis</code>
+<span class="tier t4">Tier 4 &middot; Generative</span></div>
+<div class="what">Write a full synopsis — the entire plot including the ending, in present tense, with nothing withheld — showing the causal chain rather than a list of events.</div>
+<div class="when"><span class="lbl">when</span>Use when an agent or editor requests a synopsis alongside a query, when the author wants to test whether the plot's cause-and-effect actually holds together, or after the manuscript's structure is locked.</div>
+<details class="more"><summary>what it promises</summary>
+<div class="tq"><b>Tier 4 — generative.</b> Raw material to react against, not a finished document. But this genre has one hard formal rule the other Tier 4 skills don't: <b>nothing is withheld.</b> A synopsis that holds back the ending isn't a weaker synopsis — it's not doing the job.</div><div class="srcs"><span class="lbl">reads</span><code>craft/publishing/publishing.md</code></div></details>
+</div></div></section>
+
+<footer>
+Craft derived from Brandon Sanderson's published writing lectures, with guest material by
+<b>Mary Robinette Kowal</b> (short fiction, MICE, yes-but/no-and) and <b>Brandon Mull</b>
+(middle grade / YA). Several core techniques &mdash; try-fail cycles, prose as a pane of glass
+&mdash; are credited by Sanderson to <b>Dave Wolverton</b>. See <code>CREDITS.md</code>.<br><br>
+Generated from the skill files themselves &mdash; regenerate after changing any skill.
+Full craft base in <code>craft/</code>; skill definitions in <code>skills/</code>.
+</footer></div></body></html>

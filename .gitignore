@@ -1,0 +1,43 @@
+# ── Never publish ────────────────────────────────────────────────────────────
+# Machine transcriptions of Brandon Sanderson's lectures. His words, not ours.
+# The craft/ docs are our own operational rewrites and DO ship; these do not.
+# See docs/DISTRIBUTION-PLAN.md
+docs/sources/transcripts/
+docs/sources/raw-vtt/
+
+# Superseded working material
+docs/sources/sanderson-craft-handbook-working-draft.md
+docs/sources/lecture-source-list.md
+
+# ── No story content in the public repo ──────────────────────────────────────
+# The scaffold folders ship with templates and _index.md only. If a real
+# manuscript ever appears here, something has gone wrong.
+manuscript/*
+!manuscript/_status.md
+!manuscript/.gitkeep
+archive/
+
+# ── Local ────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+~$*
+
+# Dashboard build output - derived from the workspace, never committed
+dashboard/static/data.json
+dashboard/static/data.json.tmp
+__pycache__/
+*.pyc
+
+# Local machine config, never committed
+ink.local.json
+
+# Internal working material, not part of the product.
+# The extraction notes are ~150k words of close paraphrase of one author's
+# lectures. craft/ holds our own operational rewrites and DOES ship; these
+# are the audit trail and stay local.
+docs/sources/notes/
+docs/DISTRIBUTION-PLAN.md
+docs/SKILL-SUITE.md
+docs/sources/PROCESSING-LOG.md
