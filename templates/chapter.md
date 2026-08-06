@@ -1,4 +1,4 @@
-# Chapter N — <Title>
+# Chapter N: <Title>
 
 **POV:** <>
 **Status:** <not started / drafting / drafted / revised>

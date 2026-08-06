@@ -1,17 +1,17 @@
 ---
 name: write
-description: Start or resume a writing session on the novel. Runs an interactive turn-by-turn loop in one of two modes — Chapter Mode for drafting prose, Structure Mode for story decisions and consistency audits. Use whenever the author wants to work on the book, write a scene, resolve an open question, or check the project for contradictions.
+description: Start or resume a writing session on the novel. Runs an interactive turn-by-turn loop in one of two modes. Chapter Mode for drafting prose, Structure Mode for story decisions and consistency audits. Use whenever the author wants to work on the book, write a scene, resolve an open question, or check the project for contradictions.
 ---
 
-# /write — the writing loop
+# /write: the writing loop
 
-> **Tier 4 — generative**, wrapped in a procedure. The loop's structure is reliable; **the prose
+> **Tier 4. Generative**, wrapped in a procedure. The loop's structure is reliable; **the prose
 > and the options offered are not answers.** Every beat is a suggestion to react against, and
 > "something else entirely" is always the expected reply, not a fallback.
 
 You are co-writing a novel with the author. They decide; you draft. This skill runs the loop.
 
-Read `CLAUDE.md` first if it isn't already in context — the hard rules there govern everything
+Read `CLAUDE.md` first if it isn't already in context. The hard rules there govern everything
 below, especially: never read `archive/`, never invent a proper noun, never contradict the
 continuity ledger.
 
@@ -26,8 +26,8 @@ Do this every time `/write` is invoked. Do not skip it, even if you think you kn
 ```
 Where are we going?
 
-  1. CHAPTER MODE   — draft prose
-  2. STRUCTURE MODE — story decisions, or a consistency audit
+  1. CHAPTER MODE. Draft prose
+  2. STRUCTURE MODE. Story decisions, or a consistency audit
 ```
 
 4. Load the matching reference file and follow it:
@@ -35,7 +35,7 @@ Where are we going?
    - Structure Mode → `references/structure-mode.md`
 
 If `story/open-questions.md` still has BLOCKING questions open and the author picks Chapter Mode,
-say so once — name which ones and what they'd block — and let them decide. They may want to
+say so once, name which ones and what they'd block, and let them decide. They may want to
 draft anyway. Don't refuse, and don't ask twice.
 
 ## Craft
@@ -45,7 +45,7 @@ draft anyway. Don't refuse, and don't ask twice.
 
 | When | Read |
 |---|---|
-| Any diagnosis — "why isn't this working?" | `craft/reference/problem-to-technique.md` |
+| Any diagnosis. "Why isn't this working?" | `craft/reference/problem-to-technique.md` |
 | Before offering options in a scene | `craft/reference/quick-checks.md` |
 | Building or fixing a character | `craft/character/proactive-relatable-capable.md` |
 | Pacing, or a sagging middle | `craft/plot/progress-and-signposting.md` |
@@ -53,7 +53,7 @@ draft anyway. Don't refuse, and don't ask twice.
 | Magic, or any invented capability | `craft/worldbuilding/sandersons-laws-of-magic.md` |
 
 **Name the technique when you use one.** If you're offering a direction because it starts a
-try-fail cycle, say so in four words. The author learns the vocabulary by watching it get used — that's a
+try-fail cycle, say so in four words. The author learns the vocabulary by watching it get used. That's a
 goal of this system, not a nicety. One clause, not a lecture.
 
 **Attribution:** the craft is Sanderson's. When a technique visibly shapes a suggestion, saying
@@ -87,7 +87,7 @@ End every exchange with the receipt block. Fixed format, no commentary inside it
 ── LOGGED ──
    the-dragon.md      Visual: left wing torn, third joint
    protagonist.md     keeps a headlamp in the shed
-   continuity-ledger  dragon can't fly — duration TBD
+   continuity-ledger  dragon can't fly. Duration TBD
 ── NEXT ──
 ```
 
@@ -96,7 +96,7 @@ Structure Mode uses `── DECIDED ──` instead of `WROTE`, naming the docum
 If a turn established nothing worth logging, write `── LOGGED ── nothing new`. Do not invent
 entries to fill the block.
 
-## Documentation and shipping — automatic
+## Documentation and shipping: automatic
 
 Governed by `references/doc-protocol.md`. Summary: log every exchange, write through immediately
 only for canon-changing facts, promote everything properly at scene end, then **commit and push**.
@@ -104,7 +104,7 @@ only for canon-changing facts, promote everything properly at scene end, then **
 **The author never asks for any of this.** Their job is the story. If they are telling you to
 update documents or commit work, the system has failed.
 
-**But do it visibly.** Automatic means unprompted, not silent — the receipt is the record, and at
+**But do it visibly.** Automatic means unprompted, not silent. The receipt is the record, and at
 scene end it carries `── PROMOTED ──`, `── CHECKED ──` and `── SHIPPED ──` lines so they can see
 the housekeeping happened without having to ask.
 
@@ -113,7 +113,7 @@ the housekeeping happened without having to ask.
 When the author says stop, done, or exits:
 
 1. Run the scene-end promotion path even if the scene is unfinished
-2. Update `sessions/_current.md` with a resume pointer precise enough to pick up cold —
+2. Update `sessions/_current.md` with a resume pointer precise enough to pick up cold:
    the file, the beat, the last line written, and the decision pending
 3. Give a short session summary: what was written, what was decided, what's next
 

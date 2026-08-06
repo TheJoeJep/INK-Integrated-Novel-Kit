@@ -20,12 +20,12 @@ loosely is the one readers skim.
 
 ## The three parts
 
-**Promise** — what does this thread promise, and where is that promise made?
+**Promise:** what does this thread promise, and where is that promise made?
 
-**Progress** — what kind? Information, relationship, or internal? How is it signposted so a
+**Progress:** what kind? Information, relationship, or internal? How is it signposted so a
 reader can *see* it advancing?
 
-**Payoff** — what answers it, and where?
+**Payoff:** what answers it, and where?
 
 ## Thread type and closure
 
@@ -33,12 +33,12 @@ Which MICE thread is this, and what closes it?
 
 | Opens with | Must close with |
 |---|---|
-| Milieu — entering a place | Exiting it |
-| Inquiry — a question asked | The question answered |
-| Character — an identity shift beginning | Self-definition solidifying |
-| Event — status quo disrupted | New status quo established |
+| Milieu. Entering a place | Exiting it |
+| Inquiry. A question asked | The question answered |
+| Character. An identity shift beginning | Self-definition solidifying |
+| Event. Status quo disrupted | New status quo established |
 
-**Nests inside:** <parent thread, if any — it must close before the parent can>
+**Nests inside:** <parent thread, if any. It must close before the parent can>
 
 ## Beats
 

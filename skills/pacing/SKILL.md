@@ -3,12 +3,12 @@ name: pacing
 description: Audit where progress becomes invisible to the reader and where pacing goes uniform. Use when the middle sags, when a reader reports getting bored or skimming, when a section feels slow, or before finishing an act. Also use when the author asks about pacing, momentum, or signposting.
 ---
 
-# /pacing — progress and signposting audit
+# /pacing: progress and signposting audit
 
-> **Tier 2 — diagnostic**, with a mechanical core. Counting signposts is verification; judging
+> **Tier 2. Diagnostic**, with a mechanical core. Counting signposts is verification; judging
 > whether the pace *feels* right is not, and I'll mark that.
 
-**Say this on invocation:** *Auditing signposts and pacing — the counts are mechanical, the feel
+**Say this on invocation:** *Auditing signposts and pacing. The counts are mechanical, the feel
 judgements I'll mark.*
 
 **Source:** [`craft/plot/progress-and-signposting.md`](../../craft/plot/progress-and-signposting.md)
@@ -26,7 +26,7 @@ Those are different jobs, and the second is the one readers experience.
 
 > A big reason people drop a book is that there weren't enough signposts of progress.
 
-Not that nothing was happening — that the reader **couldn't see** it. This is usually fixed by
+Not that nothing was happening. That the reader **couldn't see** it. This is usually fixed by
 making visible what's already there, **not by adding plot.**
 
 ---
@@ -38,7 +38,7 @@ making visible what's already there, **not by adding plot.**
 **2. Per chapter, identify what progressed.** Plot, character understanding, or the underlying
 conflict. One is enough.
 
-**3. Then the harder question — point at where the reader can SEE it.** A specific line. If you
+**3. Then the harder question. Point at where the reader can SEE it.** A specific line. If you
 can't find one, the chapter has invisible progress, which is the finding.
 
 **4. Check the four signpost types:**
@@ -50,7 +50,7 @@ can't find one, the chapter has invisible progress, which is the finding.
 **5. Check the stealth thesis paragraph.** Does each chapter open by establishing its subject and
 close on resolution or forward pressure?
 
-**6. Check pace variation.** Chapter lengths, beat density. **Uniformity is itself a finding** —
+**6. Check pace variation.** Chapter lengths, beat density. **Uniformity is itself a finding**:
 variation is noticeable, and its absence reads as coasting.
 
 **7. Check thriller-pacing limits.** If running short chapters with end hooks: that mode runs out
@@ -69,24 +69,24 @@ diversion however good it is.
 
   ch   progressed                     visible at              signposts
   ──   ─────────────────────────────  ──────────────────────  ─────────
-  08   plot — the archive lead        "the drawer was empty"    2
-  09   character — he stops trusting  —  NOT VISIBLE            0   ✗
-  10   nothing identified             —                         0   ✗
-  11   plot — the funding trail       "the name on the plaque"  3
-  12   character — grief              —  NOT VISIBLE            1   ⚠
-  13   plot — the Curator             "he'd catalogued it"      2
-  14   conflict — they're exposed     "someone had been there"  2
+  08   plot. The archive lead        "the drawer was empty"    2
+  09   character, he stops trusting, NOT VISIBLE            0   ✗
+  10   nothing identified. 0   ✗
+  11   plot. The funding trail       "the name on the plaque"  3
+  12   character, grief, NOT VISIBLE            1   ⚠
+  13   plot. The Curator             "he'd catalogued it"      2
+  14   conflict. They're exposed     "someone had been there"  2
 
 ── FINDINGS ──
-  ✗  ch09–ch10 — two consecutive chapters with no visible progress
+  ✗  ch09–ch10. Two consecutive chapters with no visible progress
      This is where readers will stop. ch09 DOES progress; it isn't signposted.
      Fix by making it visible, not by adding events.
-  ⚠  ch10 — nothing progresses at all. Candidate for cutting or merging
+  ⚠  ch10. Nothing progresses at all. Candidate for cutting or merging
   ⚠  Uniform pace: ch08–ch14 all 2,900–3,300 words, similar beat density
 
 ── OPINION ──
   The Act reads as slower than its content warrants. My read is this is
-  a visibility problem rather than a content problem — there's plenty
+  a visibility problem rather than a content problem. There's plenty
   happening in ch09.
 ```
 
@@ -102,7 +102,7 @@ diversion however good it is.
 - **Mark feel judgements as opinion**
 
 
-**Delegation:** this check fans out. Dispatch Sonnet subagents per file or per sub-check rather than working sequentially in the main thread — see [skills/_CONVENTIONS.md](../_CONVENTIONS.md). Delegate gathering; keep judgement.
+**Delegation:** this check fans out. Dispatch Sonnet subagents per file or per sub-check rather than working sequentially in the main thread. See [skills/_CONVENTIONS.md](../_CONVENTIONS.md). Delegate gathering; keep judgement.
 
 ## Related
 

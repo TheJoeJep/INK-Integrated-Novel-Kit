@@ -1,4 +1,4 @@
-# <NN — Title>
+# <NN: Title>
 
 **Act:** <>
 **Status:** <locked / sketch / drafted / revised>

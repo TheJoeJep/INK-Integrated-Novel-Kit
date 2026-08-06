@@ -3,13 +3,13 @@ name: new-character
 description: Build a new character through a structured interview and write their dossier. Use when adding any significant character, when an existing character feels flat or generic, or when the author asks for help developing someone. Also use when a character needs an arc designed or their position in the cast worked out.
 ---
 
-# /new-character — structured character build
+# /new-character: structured character build
 
-> **Tier 4 — generative.** This produces **raw material for your judgement, not answers.** The
+> **Tier 4. Generative.** This produces **raw material for your judgement, not answers.** The
 > questions are Sanderson's; the suggestions are mine and should be treated as starting points to
 > react against. Where I offer options, pick one or reject all of them.
 
-**Say this on invocation:** *Building a character — the framework is Sanderson's, the specific
+**Say this on invocation:** *Building a character. The framework is Sanderson's, the specific
 suggestions are mine and are raw material. React against them rather than accepting them.*
 
 **Sources:** [`craft/character/motivation-personality-values.md`](../../craft/character/motivation-personality-values.md)
@@ -21,7 +21,7 @@ suggestions are mine and are raw material. React against them rather than accept
 ## Before starting
 
 **Say this once, because it changes expectations usefully:** characters usually take more than one
-attempt. Three Vins. Two Kaladins. Dalinar worked first time — *too stubborn to be anybody else*.
+attempt. Three Vins. Two Kaladins. Dalinar worked first time. *Too stubborn to be anybody else*.
 A character not working in draft one is normal.
 
 **And:** every character starts as a stereotype crossed with an archetype. Nuance arrives as the
@@ -31,10 +31,10 @@ story goes. Don't try to make them three-dimensional at first appearance.
 
 ## The interview
 
-Ask in order. **One question at a time.** Don't move on until there's a concrete answer — abstract
+Ask in order. **One question at a time.** Don't move on until there's a concrete answer. Abstract
 answers ("stability," "meaning") are where flat characters come from.
 
-### 1. Motivation — the foundation
+### 1. Motivation: the foundation
 
 - **What do they want?** Concretely, today
 - **What don't they want anyone to know about them?**
@@ -44,7 +44,7 @@ answers ("stability," "meaning") are where flat characters come from.
 *Questions two and three do the most work. A character with a concealed thing and an unrepeatable
 failure has motivation, internal conflict, and a flaw in one stroke.*
 
-### 2. Personality — how they pursue it
+### 2. Personality: how they pursue it
 
 **Generate three expressions of the same want, and push for the non-obvious one.**
 
@@ -56,11 +56,11 @@ different people.
 
 What principles shape both the want and its expression?
 
-**For an antagonist, decide deliberately:** comprehensible values (Magneto — his goal isn't
+**For an antagonist, decide deliberately:** comprehensible values (Magneto. His goal isn't
 relatable, his fear is), or elemental force of nature (Sauron, whose interiority would add
 nothing). **Commit either way.** A half-explained villain is worse than either.
 
-*If elemental — is there a Gollum somewhere to anchor it?*
+*If elemental. Is there a Gollum somewhere to anchor it?*
 
 ### 4. Position on the three axes
 
@@ -76,10 +76,10 @@ Score them **in the situation the story puts them in**, not as global traits.
 
 **Then:** which is lowest? *That's the arc.*
 
-**Check:** is your antagonist out-proacting your protagonist? If so — accept it and lean on the
+**Check:** is your antagonist out-proacting your protagonist? If so, accept it and lean on the
 other axes, let the plot force proactivity, or seed it small early.
 
-### 5. Flaw, restriction, or limitation — decide which
+### 5. Flaw, restriction, or limitation: decide which
 
 | | | Story job |
 |---|---|---|
@@ -89,12 +89,12 @@ other axes, let the plot force proactivity, or seed it small early.
 
 *He renames these across lectures; the concepts are stable. Restriction is the underused one.*
 
-**Has the flaw's cost been shown before you try to pay it off?** And is it double-edged — hubris
+**Has the flaw's cost been shown before you try to pay it off?** And is it double-edged. Hubris
 is also self-confidence?
 
 ### 6. Arc or iconic
 
-**Decide deliberately.** An iconic character — no arc, consistent book to book — is **just as
+**Decide deliberately.** An iconic character, no arc, consistent book to book, is **just as
 valid**, and a cast where everyone transforms flattens the book.
 
 If arc: which axis moves, and **why** would they choose differently by the end? *Fail three times
@@ -116,7 +116,7 @@ thinking. A quirk attached to nothing reads as forced.
 From `.claude/templates/character.md`, into `characters/`. Fill what the interview produced; leave
 the rest as open questions rather than inventing.
 
-**Include the `## Visual` block** even if sparse — it's what makes image generation possible later.
+**Include the `## Visual` block** even if sparse. It's what makes image generation possible later.
 
 ---
 
@@ -127,7 +127,7 @@ the rest as open questions rather than inventing.
 - **Offer options, never one suggestion.** Three, clearly labelled as raw material
 - **Don't fill gaps by inventing.** An unanswered question is an open question in the doc
 - **Say when a choice conflicts** with `canon/` or `story/structural-rules.md`
-- **Name the technique** as you use it — one clause, not a lecture
+- **Name the technique** as you use it. One clause, not a lecture
 
 ## Related
 

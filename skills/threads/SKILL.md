@@ -3,20 +3,20 @@ name: threads
 description: Audit every open narrative thread and verify each one closes, in the right order. Use when an ending feels unsatisfying, when a draft or outline feels like it's missing something you can't name, or before calling a chapter, act, or book finished. Also use when the author asks about loose ends, dangling plots, or unresolved subplots.
 ---
 
-# /threads — thread audit
+# /threads: thread audit
 
-> **Tier 1 — mechanical check.** This is bookkeeping against a documented rule, not a judgement
+> **Tier 1. Mechanical check.** This is bookkeeping against a documented rule, not a judgement
 > call. Report findings flatly. If a thread is unclosed, say so; don't soften it, and don't
 > speculate about whether it "works anyway" unless asked.
 
-**Say this on invocation:** *Running a thread audit — this is a mechanical check, so the findings
+**Say this on invocation:** *Running a thread audit. This is a mechanical check, so the findings
 are as reliable as the source docs.*
 
 ---
 
 ## The rule being checked
 
-From **Mary Robinette Kowal** (MICE Quotient, nesting) and **Sanderson** (bracketing) — two
+From **Mary Robinette Kowal** (MICE Quotient, nesting) and **Sanderson** (bracketing). Two
 teachers who arrived at it independently, four years apart, which is the strongest evidence in
 the craft base that it's real.
 
@@ -45,15 +45,15 @@ first.
 Default to the current chapter.
 
 **2. Read the material.** For drafted prose, the scene files. For undrafted work, the `plot/`
-docs and `story/outline.md` — **this audit works on an outline, before a word is written.**
+docs and `story/outline.md`. **This audit works on an outline, before a word is written.**
 
 **3. Build the thread table.** For each thread: type, where it opens, what its matching close
 would be, and where (if anywhere) it closes.
 
 **4. Check three things, in this order:**
-   - **Unclosed** — opened, never closed. The commonest cause of an unsatisfying ending
-   - **Mismatched** — closed the wrong way. An Inquiry answered when a Milieu was opened
-   - **Out of order** — closed before something nested inside it
+   - **Unclosed:** opened, never closed. The commonest cause of an unsatisfying ending
+   - **Mismatched:** closed the wrong way. An Inquiry answered when a Milieu was opened
+   - **Out of order:** closed before something nested inside it
 
 **5. Report.**
 
@@ -90,10 +90,10 @@ Use `✓` closed correctly, `✗` unclosed, `⚠` order or type problem.
   manufacture concerns.
 
 
-**Delegation:** this check fans out. Dispatch Sonnet subagents per file or per sub-check rather than working sequentially in the main thread — see [skills/_CONVENTIONS.md](../_CONVENTIONS.md). Delegate gathering; keep judgement.
+**Delegation:** this check fans out. Dispatch Sonnet subagents per file or per sub-check rather than working sequentially in the main thread. See [skills/_CONVENTIONS.md](../_CONVENTIONS.md). Delegate gathering; keep judgement.
 
 ## Related
 
-- [`craft/plot/promise-progress-payoff.md`](../../craft/plot/promise-progress-payoff.md) — a
+- [`craft/plot/promise-progress-payoff.md`](../../craft/plot/promise-progress-payoff.md). A
   thread that closes without paying its promise is a different failure; use `/promises`
 - [`craft/reference/problem-to-technique.md`](../../craft/reference/problem-to-technique.md)

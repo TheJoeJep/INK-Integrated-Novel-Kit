@@ -20,12 +20,12 @@ What they can actually do.
 
 ## Limits
 
-What they cannot do. This matters more than capabilities — a faction without limits
+What they cannot do. This matters more than capabilities. A faction without limits
 can't be beaten and can't create tension.
 
 ## Visual
 
-Iconography, dress, markings, how a member is recognized — if they can be.
+Iconography, dress, markings, how a member is recognized. If they can be.
 Feeds image generation.
 
 ## Key members

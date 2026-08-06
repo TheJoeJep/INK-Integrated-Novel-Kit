@@ -1,14 +1,14 @@
 ---
 name: chapter-check
-description: Run a full review pass over a chapter — every mechanical check and diagnostic at once, then a single ranked report. Use when a chapter is drafted and ready for review, before moving to the next chapter, when the author asks for a full check or "review this chapter", or when something feels wrong but they can't say what. Defaults to the current chapter if none is named.
+description: Run a full review pass over a chapter. Every mechanical check and diagnostic at once, then a single ranked report. Use when a chapter is drafted and ready for review, before moving to the next chapter, when the author asks for a full check or "review this chapter", or when something feels wrong but they can't say what. Defaults to the current chapter if none is named.
 ---
 
-# /chapter-check — the full review pass
+# /chapter-check: the full review pass
 
 > **Orchestrator.** Runs the other skills and reconciles their findings. Individual checks keep
 > their own tiers; **the synthesis is mine, and I'll mark it as such.**
 
-**Say this on invocation:** *Full chapter review — dispatching the checks in parallel, then
+**Say this on invocation:** *Full chapter review. Dispatching the checks in parallel, then
 reconciling. Individual findings carry their own reliability; the ranking is my judgement.*
 
 **Conventions:** [`skills/_CONVENTIONS.md`](../_CONVENTIONS.md)
@@ -18,7 +18,7 @@ reconciling. Individual findings carry their own reliability; the ranking is my 
 ## Scope
 
 **Default to the current chapter** from `sessions/_current.md`. If the author names one, use that.
-Accept "the whole book" — but say it'll take longer and produce a lot.
+Accept "the whole book". But say it'll take longer and produce a lot.
 
 **If the chapter isn't drafted**, say so and offer the outline-level subset instead: `/threads`,
 `/promises`, `/plants` and `/subplot` all work without prose.
@@ -27,7 +27,7 @@ Accept "the whole book" — but say it'll take longer and produce a lot.
 
 ## Run it in parallel
 
-**This is the skill where delegation matters most** — a dozen checks over the same files, all
+**This is the skill where delegation matters most:** a dozen checks over the same files, all
 independent.
 
 **Dispatch Sonnet subagents, one per check, in two waves.** Don't run them sequentially and don't
@@ -36,7 +36,7 @@ which is the exact failure this skill exists to avoid.
 
 Unless the author asked for a different model, use Sonnet.
 
-### Wave 1 — mechanical (Tier 1)
+### Wave 1: mechanical (Tier 1)
 
 All independent. Dispatch together:
 
@@ -49,7 +49,7 @@ All independent. Dispatch together:
 | `/plants` | Plants laid here with no payoff; payoffs with no plant |
 | `/visuals` | Entities described in prose with empty or stale Visual blocks |
 
-### Wave 2 — diagnostic (Tier 2)
+### Wave 2: diagnostic (Tier 2)
 
 Dispatch after wave 1 returns, because some depend on its findings:
 
@@ -61,27 +61,27 @@ Dispatch after wave 1 returns, because some depend on its findings:
 | `/gorillas` | Unsignalled oddities that eject a reader |
 | `/subplot` | Threads running with no archetype or no MDQ connection |
 
-### Wave 3 — per scene, only if warranted
+### Wave 3: per scene, only if warranted
 
 `/scene` on any scene wave 2 flagged. `/dialogue` on any scene that is majority dialogue.
-**Don't run these on every scene by default** — it's a wall of output nobody reads.
+**Don't run these on every scene by default:** it's a wall of output nobody reads.
 
 ---
 
-## Then reconcile — this is the actual job
+## Then reconcile: this is the actual job
 
 The subagents return raw findings. **Your work is what they can't do:**
 
 **1. Deduplicate.** One root cause surfaces in several checks. A character with no established
 want will trip `/motivation`, `/pacing` and `/scene` separately. **Report it once**, and note it
-explained three symptoms — that's stronger evidence than any of them alone.
+explained three symptoms. That's stronger evidence than any of them alone.
 
 **2. Rank by cost, not by count.** An unplanted payoff for a rung-four reveal outranks nine
 placeholder occurrences. **The check that returned the most findings is rarely the most
 important.**
 
 **3. Find the causal chain.** Findings that look independent often aren't. *No want in ch01* →
-*the choice in beat 3 reads as unmotivated* → *the arc doesn't land in Act 3.* **Say so** — one
+*the choice in beat 3 reads as unmotivated* → *the arc doesn't land in Act 3.* **Say so**. One
 fix, three symptoms.
 
 **4. Separate blocking from cosmetic.** Blocking means it must be fixed before the next chapter,
@@ -100,7 +100,7 @@ because later work will build on it.
 ── BLOCKING ── fix before ch02
   1. The protagonist has no concrete want before beat 3
      Surfaced by: /motivation, /pacing, /scene
-     One cause, three symptoms — the choice in beat 3 rests on a
+     One cause, three symptoms. The choice in beat 3 rests on a
      motivation the reader hasn't been given, so the beat reads as
      arbitrary and the scene reads as slow.
      → craft/character/proactive-relatable-capable.md
@@ -137,10 +137,10 @@ because later work will build on it.
 - **Report clean checks in one line each.** They're evidence, not filler
 - **Never fix anything.** This reports; `/write` and `/revise` repair
 - **If everything is clean, say so in three lines and stop.** Don't manufacture concerns
-- **Say what the chapter is missing that isn't in any check** — a subplot never started, a beat
+- **Say what the chapter is missing that isn't in any check:** a subplot never started, a beat
   from `plot/` never written. Absence isn't findable by a check that only reads what's there
 
 ## Related
 
-`/revision-map` — turn these findings into an ordered work list ·
+`/revision-map`. Turn these findings into an ordered work list ·
 `/diagnose` · `/revise` · `/write`

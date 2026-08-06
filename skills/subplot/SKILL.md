@@ -1,15 +1,15 @@
 ---
 name: subplot
-description: Plan, document, or audit a subplot as a thread in its own right — its archetype, promise, progress, payoff, and how it connects to the main story. Use when adding a secondary storyline, when a subplot feels shapeless or disconnected, when readers skim a thread, when deciding whether a subplot earns its place, or when the author asks what subplots the book is running.
+description: Plan, document, or audit a subplot as a thread in its own right. Its archetype, promise, progress, payoff, and how it connects to the main story. Use when adding a secondary storyline, when a subplot feels shapeless or disconnected, when readers skim a thread, when deciding whether a subplot earns its place, or when the author asks what subplots the book is running.
 ---
 
-# /subplot — subplots as first-class threads
+# /subplot: subplots as first-class threads
 
-> **Tier 2/3 hybrid.** Auditing existing subplots is diagnostic — documented rules, ranked
+> **Tier 2/3 hybrid.** Auditing existing subplots is diagnostic. Documented rules, ranked
 > findings. Designing a new one is procedural, and any *content* I propose is raw material to
 > react against.
 
-**Say this on invocation:** *Working subplots — the audit is against documented rules; any thread
+**Say this on invocation:** *Working subplots. The audit is against documented rules; any thread
 content I propose is a suggestion.*
 
 **Source:** [`craft/plot/plot-archetypes.md`](../../craft/plot/plot-archetypes.md) ·
@@ -22,8 +22,8 @@ content I propose is a suggestion.*
 ## Why subplots need their own documents
 
 **A subplot is a whole story in miniature.** Its own promise, its own kind of progress, its own
-payoff, its own archetype. The craft base asks these questions directly — *what archetype is each
-subplot running?*, *does every subplot touch the Major Dramatic Question?* — and with nowhere to
+payoff, its own archetype. The craft base asks these questions directly. *What archetype is each
+subplot running?*, *does every subplot touch the Major Dramatic Question?*. And with nowhere to
 record the answers, they get decided by accident.
 
 **The failure this prevents:** a subplot with no archetype has no shape, and a thread with no
@@ -34,7 +34,7 @@ Subplots live in `plot/subplots/`, one document each, from `.claude/templates/su
 
 ---
 
-## AUDIT — what is this book actually running?
+## AUDIT: what is this book actually running?
 
 **1. Inventory.** Read `plot/`, `story/outline.md`, `plot/subplots/`, and the manuscript if it
 exists. List every thread that isn't the main line.
@@ -73,7 +73,7 @@ More than the length supports produces a book that feels busy and unresolved.
      Candidates: mystery (what do they actually know?) or
      betrayal (they aren't what they claimed).
 
-  ✗  The neighbour               —                 NO DOC
+  ✗  The neighbour. NO DOC
      Appears ch01/04, ch01/05. Opens an Inquiry thread
      (does she know?) that never closes.
 
@@ -85,26 +85,26 @@ More than the length supports produces a book that feels busy and unresolved.
   1 undocumented · 1 without archetype · 1 disconnected from the MDQ
 
 ── OPINION ──
-  The neighbour thread is cheap to convert — it could carry the leak in
+  The neighbour thread is cheap to convert. It could carry the leak in
   beat 5, which is still undecided. That closes it and pays a main-line
   beat at once.
 ```
 
 ---
 
-## DESIGN — building a new subplot
+## DESIGN: building a new subplot
 
 Interview, one question at a time:
 
 1. **What is this thread about**, separate from the main plot?
-2. **What archetype?** Not "relationship" — *which kind*. Deepening, souring into betrayal,
+2. **What archetype?** Not "relationship". *Which kind*. Deepening, souring into betrayal,
    master/apprentice?
 3. **What does it promise, and where?**
-4. **What kind of progress** — information, relationship, or internal? **How is it signposted?**
+4. **What kind of progress:** information, relationship, or internal? **How is it signposted?**
 5. **What pays it off?**
 6. **Which MICE thread** does it open, what closes it, and **does it nest inside another?**
 7. **How does it touch the Major Dramatic Question?**
-8. **What breaks if you cut it?** If nothing, say so — that's the useful answer
+8. **What breaks if you cut it?** If nothing, say so. That's the useful answer
 
 Then write the doc from the template into `plot/subplots/`.
 
@@ -116,14 +116,14 @@ Then write the doc from the template into `plot/subplots/`.
 - **"What breaks if it's cut" is the question that matters.** Ask it of every subplot and report
   honestly when the answer is *nothing*
 - **Don't invent an archetype to fill a gap.** Offer candidates; let the author choose
-- **Cross-check with `/threads`.** They overlap deliberately — `/threads` finds unclosed threads
+- **Cross-check with `/threads`.** They overlap deliberately. `/threads` finds unclosed threads
   mechanically; this asks whether a thread should exist at all
-- **A subplot disconnected from the MDQ isn't automatically wrong** — but say so plainly, since
+- **A subplot disconnected from the MDQ isn't automatically wrong:** but say so plainly, since
   it's the commonest reason a well-written thread gets skimmed
 - **Don't fix.** Findings and designs only; repair goes through `/write`
 
 
-**Delegation:** this check fans out. Dispatch Sonnet subagents per file or per sub-check rather than working sequentially in the main thread — see [skills/_CONVENTIONS.md](../_CONVENTIONS.md). Delegate gathering; keep judgement.
+**Delegation:** this check fans out. Dispatch Sonnet subagents per file or per sub-check rather than working sequentially in the main thread. See [skills/_CONVENTIONS.md](../_CONVENTIONS.md). Delegate gathering; keep judgement.
 
 ## Related
 

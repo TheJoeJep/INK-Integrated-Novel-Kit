@@ -1,14 +1,14 @@
 ---
 name: character-arc
-description: Design or diagnose a character arc — which axis moves, what type of arc it is, and whether it's earned. Use when planning a character's development, when an arc doesn't land, when deciding whether a character needs an arc at all, or when planning growth across a series.
+description: Design or diagnose a character arc. Which axis moves, what type of arc it is, and whether it's earned. Use when planning a character's development, when an arc doesn't land, when deciding whether a character needs an arc at all, or when planning growth across a series.
 ---
 
-# /character-arc — arc design
+# /character-arc: arc design
 
-> **Tier 3 — procedural.** The taxonomy and tests are Sanderson's. Specific arc content I propose
+> **Tier 3. Procedural.** The taxonomy and tests are Sanderson's. Specific arc content I propose
 > is raw material.
 
-**Say this on invocation:** *Working the arc taxonomy — the tests are Sanderson's, any arc content
+**Say this on invocation:** *Working the arc taxonomy. The tests are Sanderson's, any arc content
 I suggest is raw material.*
 
 **Source:** [`craft/character/arcs-and-iconic-characters.md`](../../craft/character/arcs-and-iconic-characters.md)
@@ -18,8 +18,8 @@ I suggest is raw material.*
 
 ## 1. Does this character need an arc at all?
 
-**Ask before anything else.** An **iconic character** — no arc, consistent book to book, stories
-readable out of order — is **just as valid**.
+**Ask before anything else.** An **iconic character**. No arc, consistent book to book, stories
+readable out of order. Is **just as valid**.
 
 **Don't give everyone an arc.** In a large cast it flattens the book: every thread runs the same
 kind of change and none stand out. An iconic fixed point is what makes a moving one legible.
@@ -29,7 +29,7 @@ kind of change and none stand out. An iconic fixed point is what makes a moving 
 - **Villain.** The Joker's decisions are already made; Batman's conflict *reveals* his flaws but
   can't change him, and that stasis is his downfall. **An iconic villain can have already refused
   the lesson before page one**
-- **Mentor.** Gandalf doesn't change while Frodo runs a corruption arc. *(But mentor ≠ iconic —
+- **Mentor.** Gandalf doesn't change while Frodo runs a corruption arc. *(But mentor ≠ iconic.
   Kelsier is a counter-example)*
 - **Ensemble.** The *Mission: Impossible* team mostly don't arc; they carry continuity and tone
 
@@ -38,11 +38,11 @@ kind of change and none stand out. An iconic fixed point is what makes a moving 
 ## 2. Which axis moves?
 
 An arc is **movement along one of the three axes.** If you can't name which, you don't have an
-arc — you have a character who has experiences.
+arc. You have a character who has experiences.
 
 | Axis | Arc looks like |
 |---|---|
-| **Relatability** | Overcoming what made them distant or harsh. **The most common** — and the *working on it* raises relatability before it resolves |
+| **Relatability** | Overcoming what made them distant or harsh. **The most common**. And the *working on it* raises relatability before it resolves |
 | **Capability** | Learning the skill. Luke and the Force |
 | **Proactivity** | Learning to take charge of their own story |
 
@@ -55,7 +55,7 @@ arc — you have a character who has experiences.
 | Type | Engine |
 |---|---|
 | **Classic flaw** | The flaw costs them; they overcome it |
-| **Tragic** | They reach the moment of *knowing* — and **refuse to let go anyway** |
+| **Tragic** | They reach the moment of *knowing*. And **refuse to let go anyway** |
 | **Redemptive** | Same setup; at the decision point they choose differently |
 | **Apprentice** | The friction is **where they diverge** from the master, not where they follow |
 | **Mystery / ignorance-to-knowledge** | What they uncover forces them to become someone else to use it |
@@ -79,12 +79,12 @@ until the end.
 
 > *Fail three times, then succeed* is not what makes an arc work.
 
-**Why has this character become someone who would choose differently now — and will the reader
+**Why has this character become someone who would choose differently now. And will the reader
 believe it?** If there's no answer, the arc is paint-by-numbers.
 
 ### Is anything crowding it out?
 
-**The Michael problem.** A strong, well-motivated trait became the character's *only* trait —
+**The Michael problem.** A strong, well-motivated trait became the character's *only* trait:
 asked what he wants for lunch, he answers *I want my son.* The fanbase disliked a character who
 should have been a slam dunk.
 
@@ -93,7 +93,7 @@ should have been a slam dunk.
 ## 5. Across a series
 
 **The backslide warning:** don't have them relitigate the same internal problem book after book.
-**You can maybe get away with it once** — Raimi's *Spider-Man 2* is the exception, and it works
+**You can maybe get away with it once:** Raimi's *Spider-Man 2* is the exception, and it works
 because film two is about **living with** the choice at a deeper cost.
 
 He doesn't recommend trying it twice.
@@ -106,8 +106,8 @@ He doesn't recommend trying it twice.
 | Two | Luke faces him and **loses** |
 | Three | Faces Vader *and* the Emperor, and wins |
 
-**The transferable question:** what **small, real victory** can book one give — Luke wins by
-outflying, and by having better friends — **while leaving the larger challenge visibly
+**The transferable question:** what **small, real victory** can book one give. Luke wins by
+outflying, and by having better friends. **While leaving the larger challenge visibly
 unresolved?**
 
 **Also available:** external arcs can substitute for internal ones later in a series, and light
@@ -120,7 +120,7 @@ continuity (the Craig Bond model) works without every book demanding a full arc.
 ```
 ── ARC ── the protagonist
 
-  NEEDS AN ARC   yes — he's the viewpoint and the reader learns with him
+  NEEDS AN ARC   yes. He's the viewpoint and the reader learns with him
   AXIS           proactivity is lowest (he researches; he doesn't act)
                  → that's the arc
   TYPE           classic flaw, trending redemptive
@@ -128,7 +128,7 @@ continuity (the Craig Bond model) works without every book demanding a full arc.
   COST SHOWN     ⚠  the hobby is established as harmless, never as costly
                  → nothing yet demonstrates what his passivity has cost him
   DOUBLE-EDGED   ✓  the obsession is both the flaw and the qualification
-  WHY            ✗  not yet answerable — no event forces the change
+  WHY            ✗  not yet answerable. No event forces the change
   CROWDING       ✓  the dragon obsession has room around it
 
 ── FINDINGS ──

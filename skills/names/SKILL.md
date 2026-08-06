@@ -3,12 +3,12 @@ name: names
 description: Check every proper noun and coined term in the manuscript against the canonical names list, and check that terms are used by the right characters. Use after drafting, when adding a character or place, when naming decisions have changed, or before a revision pass. Also use when the author asks about naming consistency, placeholder names, or in-world terminology.
 ---
 
-# /names — terminology check
+# /names: terminology check
 
-> **Tier 1 — mechanical check.** Matching nouns against a list is verification. The one
-> judgement call — whether a term suits its speaker — is marked separately.
+> **Tier 1. Mechanical check.** Matching nouns against a list is verification. The one
+> judgement call, whether a term suits its speaker, is marked separately.
 
-**Say this on invocation:** *Checking terminology against the names list — mechanical, plus a
+**Say this on invocation:** *Checking terminology against the names list. Mechanical, plus a
 short register check I'll mark as opinion.*
 
 ---
@@ -26,7 +26,7 @@ Each entry carries three things, and all three get checked:
 | **Status** | `LOCKED` or `PLACEHOLDER` |
 
 **Register is the part people forget**, and it's where the real errors are. In this project
-*"reptilian"* is a fringe-conspiracy slur used by outsiders — the hybrids never use it of
+*"reptilian"* is a fringe-conspiracy slur used by outsiders. The hybrids never use it of
 themselves. A character using the wrong word for their own kind is a characterization error that
 reads as an author error.
 
@@ -38,17 +38,17 @@ reads as an author error.
 
 **2. Scope.** Current chapter by default; whole manuscript on request.
 
-**3. Extract every proper noun and coined term** from the prose — people, places, factions,
+**3. Extract every proper noun and coined term** from the prose. People, places, factions,
 events, invented terminology, in-world jargon.
 
 **4. Check four things:**
-   - **Unlisted** — appears in prose, absent from the list. Either add it or it's an invention
-   - **Unused** — listed but never appears. Fine, but worth knowing
-   - **Inconsistent** — spelling or capitalization drift
-   - **Register** — is the speaker someone who would use that word?
+   - **Unlisted:** appears in prose, absent from the list. Either add it or it's an invention
+   - **Unused:** listed but never appears. Fine, but worth knowing
+   - **Inconsistent:** spelling or capitalization drift
+   - **Register:** is the speaker someone who would use that word?
 
 **5. Flag placeholders in prose.** Any `PLACEHOLDER` term appearing in drafted text is a
-find-and-replace debt. **List every occurrence with its location** — that list is the deliverable
+find-and-replace debt. **List every occurrence with its location**. That list is the deliverable
 when names are finally decided.
 
 **6. Report.**
@@ -66,9 +66,9 @@ when names are finally decided.
   ⚠  INCONSISTENT   "Reveal Day" / "reveal day"    ×7 / ×2
 
   ⚠  REGISTER       the Curator says "reptilian" of himself    ch01/06
-                    list: outsider slur — they never self-apply it
+                    list: outsider slur. They never self-apply it
 
-  ◷  PLACEHOLDER IN PROSE — replace when named
+  ◷  PLACEHOLDER IN PROSE. Replace when named
      [CUSTODIANS]   ×11   ch01/02, 04, 06, 07
      [THE CONCORD]  ×2    ch01/07
 
@@ -86,18 +86,18 @@ when names are finally decided.
   through `/write` in Structure Mode. Report and stop.
 - **Placeholder counts are the point.** They tell the author what a naming decision will cost in
   edits. Always give exact occurrence counts and locations.
-- **Register findings are marked as opinion** — a character *can* use the wrong word deliberately,
+- **Register findings are marked as opinion:** a character *can* use the wrong word deliberately,
   and that's characterization rather than error. Say what the list implies and let the author
   decide.
-- **Don't flag ordinary proper nouns** — real places, real institutions, common names — unless
+- **Don't flag ordinary proper nouns:** real places, real institutions, common names. Unless
   they're doing in-world work.
 - **Report clean checks plainly.**
 
 
-**Delegation:** this check fans out. Dispatch Sonnet subagents per file or per sub-check rather than working sequentially in the main thread — see [skills/_CONVENTIONS.md](../_CONVENTIONS.md). Delegate gathering; keep judgement.
+**Delegation:** this check fans out. Dispatch Sonnet subagents per file or per sub-check rather than working sequentially in the main thread. See [skills/_CONVENTIONS.md](../_CONVENTIONS.md). Delegate gathering; keep judgement.
 
 ## Related
 
-- `/continuity` — the broader fact check
+- `/continuity`. The broader fact check
 - [`craft/character/voice-quirks-and-dialogue.md`](../../craft/character/voice-quirks-and-dialogue.md)
-  — register as characterization
+. Register as characterization
